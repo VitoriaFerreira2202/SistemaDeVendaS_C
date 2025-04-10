@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SistemaDeVendaS_C.br.com.projeto.model
 {
-    internal class Cliente
+    public class Cliente
     {
-
         //Atributos e os Getter / Setter
         public int codigo { get; set; }
+
         public string nome { get; set; }
         public string rg { get; set; }
         public string cpf { get; set; }
