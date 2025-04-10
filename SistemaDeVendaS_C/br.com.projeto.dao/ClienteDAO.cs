@@ -1,8 +1,8 @@
-﻿using MySql.Data.MySqlClient;
-using Mysqlx.Crud;
-using SistemaDeVendaS_C.br.com.projeto.conguicao;
+﻿using SistemaDeVendaS_C.br.com.projeto.conguicao;
 using SistemaDeVendaS_C.br.com.projeto.model;
+using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace SistemaDeVendaS_C.br.com.projeto.dao
@@ -63,7 +63,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             }
         }
 
-        #region CadastrarClientes
+        #endregion CadastrarClientes
 
         #region ListarCliente
 
@@ -97,7 +97,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             }
         }
 
-        #region ListarCliente
+        #endregion ListarCliente
 
         #region AlteraCliente
 
@@ -145,7 +145,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             }
         }
 
-        #region AlteraCliente
+        #endregion AlteraCliente
 
         #region ExcluirCliente
 
@@ -165,13 +165,50 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
                 executacmd.ExecuteNonQuery();
 
                 MessageBox.Show("Cliente Excluido com sucesso!");
+
+                //Fechar a conexao
+                conexao.Close();
             }
-            catch (System.Exception)
+            catch (Exception erro)
             {
-                throw;
+                MessageBox.Show("Ocorreu o erro" + erro);
             }
         }
 
-        #region ExcluirCliente
+        #endregion ExcluirCliente
+
+        #region PesquisaNome
+
+        public DataTable BuscarClientePorNome(string nome)
+        {
+            try
+            {
+                //1 passo - definir o cmd sql -  Delete
+                DataTable tabelacliente = new DataTable();
+                string sql = "select * from tb_clientes where nome=@nome";
+
+                //2 passo - Organizar o cmd sql
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
+                executacmd.Parameters.AddWithValue("@nome", nome);
+
+                //3 passo - Abrir a conexao e executar o comando sql
+                conexao.Open();
+                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);
+
+                //Fechar a conexao
+                conexao.Close();
+                return tabelacliente;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Erro ao executar o comando Sql:" + erro);
+                return null;
+            }
+        }
+
+        #endregion PesquisaNome
     }
 }

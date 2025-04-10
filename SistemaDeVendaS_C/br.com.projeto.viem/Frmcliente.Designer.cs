@@ -107,6 +107,7 @@
             this.btnEditar.TabIndex = 38;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -118,6 +119,7 @@
             this.btnExcluir.TabIndex = 37;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -497,6 +499,8 @@
             this.tabelaCliente.Name = "tabelaCliente";
             this.tabelaCliente.Size = new System.Drawing.Size(569, 150);
             this.tabelaCliente.TabIndex = 37;
+            this.tabelaCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaCliente_CellClick);
+            this.tabelaCliente.DoubleClick += new System.EventHandler(this.tabelaCliente_DoubleClick);
             // 
             // btnpesquisar
             // 
@@ -509,6 +513,7 @@
             this.btnpesquisar.TabIndex = 36;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtPesquisa
             // 
@@ -539,6 +544,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "Frmcliente";
             this.Text = "Form1Cliente";
+            this.Load += new System.EventHandler(this.Frmcliente_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);

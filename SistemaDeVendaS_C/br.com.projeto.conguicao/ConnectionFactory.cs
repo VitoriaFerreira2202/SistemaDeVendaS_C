@@ -11,6 +11,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.conguicao
     {
         //metodo que conecta o banco de dados
         public MySqlConnection getconnection()
+
         {
             string conexao = ConfigurationManager.ConnectionStrings["bdvendas"].ConnectionString;
 
