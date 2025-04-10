@@ -1,4 +1,5 @@
-﻿using SistemaDeVendaS_C.br.com.projeto.conguicao;
+﻿using MySql.Data.MySqlClient;
+using SistemaDeVendaS_C.br.com.projeto.conguicao;
 using SistemaDeVendaS_C.br.com.projeto.model;
 using System;
 using System.Data;
@@ -29,7 +30,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
 
                 // 2 passo - organizar o comando sql
 
-                MySqlCoommand executacmd = new MySqlCoommand(sql, conexao);
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
                 executacmd.Parameters.AddWithValue("@nome", obj.nome);
                 executacmd.Parameters.AddWithValue("@rg", obj.rg);
@@ -78,7 +79,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
 
                 // 2 passo - organizar o comando sql
 
-                MySqlCoommand executacmd = new MySqlCoommand(sql, conexao);
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
                 // 3 passo - Abrir a conexão e executar o comando sql
 
@@ -113,7 +114,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
 
                 // 2 passo - organizar o comando sql
 
-                MySqlCoommand executacmd = new MySqlCoommand(sql, conexao);
+                MySqlCommand executacmd = new MySqlCommand(sql, conexao);
 
                 executacmd.Parameters.AddWithValue("@nome", obj.nome);
                 executacmd.Parameters.AddWithValue("@rg", obj.rg);
@@ -202,9 +203,9 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
                 conexao.Close();
                 return tabelacliente;
             }
-            catch (Exception)
+            catch (Exception erro)
             {
-                MessageBox.Show("Erro ao executar o comando Sql:" + erro);
+                MessageBox.Show($"Erro ao executar o comando Sql:" + erro);
                 return null;
             }
         }

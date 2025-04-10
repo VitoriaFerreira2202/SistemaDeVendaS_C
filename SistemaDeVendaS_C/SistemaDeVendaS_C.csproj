@@ -98,7 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="br.com.projeto.conguicao\ConnectionFactory.cs" />
+    <Compile Include="br.com.projeto.conexao\ConnectionFactory.cs" />
     <Compile Include="br.com.projeto.dao\ClienteDAO.cs" />
     <Compile Include="br.com.projeto.model\Cliente.cs" />
     <Compile Include="br.com.projeto.viem\Frmcliente.cs">
