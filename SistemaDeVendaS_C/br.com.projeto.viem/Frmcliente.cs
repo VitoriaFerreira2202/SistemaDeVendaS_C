@@ -108,10 +108,14 @@ namespace SistemaDeVendaS_C.br.com.projeto.viem
             }
 
             Cliente obj = new Cliente();
+
             obj.codigo = int.Parse(txtCodigo.Text);
+
             ClienteDAO dao = new ClienteDAO();
+            dao.excluirCliente(obj);
 
             //recarregar o datagridview
+
             tabelaCliente.DataSource = dao.listarCliente();
         }
 

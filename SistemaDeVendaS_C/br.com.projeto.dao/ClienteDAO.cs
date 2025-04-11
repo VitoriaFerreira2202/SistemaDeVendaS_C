@@ -25,7 +25,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             {
                 //passo 1 - Definir o comando sql para o insert
 
-                string sql = @"insert into tb_cliente(nome,rg,cpf,email,telefone,celular,cep,endereco,numero,complemento,bairro,cidade,estado)
+                string sql = @"insert into tb_clientes(nome,rg,cpf,email,telefone,celular,cep,endereco,numero,complemento,bairro,cidade,estado)
                                 values(@nome,@rg,@cpf,@email,@telefone,@celular,@cep,@endereco,@numero,@complemento,@bairro,@cidade,@estado)";
 
                 // 2 passo - organizar o comando sql
@@ -84,7 +84,9 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
                 // 3 passo - Abrir a conexão e executar o comando sql
 
                 conexao.Open();
-                executacmd.ExecuteNonQuery();
+
+                MySqlDataAdapter da = new MySqlDataAdapter(executacmd);
+                da.Fill(tabelacliente);
 
                 // Fechando a conexão com o banco de Dados
 
@@ -108,7 +110,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             {
                 //passo 1 - Definir o comando sql para o insert
 
-                string sql = @"update tb_cliente set nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,celular=@celular,cep=@cep,
+                string sql = @"update tb_clientes set nome=@nome,rg=@rg,cpf=@cpf,email=@email,telefone=@telefone,celular=@celular,cep=@cep,
                              endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,cidade=@cidade,estado=@estado
                              where id=@id";
 
