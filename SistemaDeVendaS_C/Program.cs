@@ -17,7 +17,7 @@ namespace SistemaDeVendaS_C
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frmcliente());
+            Application.Run(new FrmFuncionario());
         }
     }
 }
