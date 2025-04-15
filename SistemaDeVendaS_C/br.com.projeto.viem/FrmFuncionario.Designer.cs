@@ -498,6 +498,8 @@
             this.tabelaFucionario.Name = "tabelaFucionario";
             this.tabelaFucionario.Size = new System.Drawing.Size(569, 150);
             this.tabelaFucionario.TabIndex = 37;
+            this.tabelaFucionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFucionario_CellClick);
+            this.tabelaFucionario.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaFucionario_CellDoubleClick);
             // 
             // btnpesquisar
             // 
@@ -510,6 +512,7 @@
             this.btnpesquisar.TabIndex = 36;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtPesquisa
             // 
@@ -558,6 +561,7 @@
             this.btnEditar.TabIndex = 45;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -569,6 +573,7 @@
             this.btnExcluir.TabIndex = 44;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
