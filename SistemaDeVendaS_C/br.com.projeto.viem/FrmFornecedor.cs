@@ -23,7 +23,6 @@ namespace SistemaDeVendaS_C.br.com.projeto.viem
         private void FrmFornecedor_Load(object sender, EventArgs e)
         {
             FornecedorDao dao = new FornecedorDao();
-            dao.CadastrarFornecedor(obj);
             tabelaFornecedor.DataSource = dao.ListarFornecedor();
         }
 
