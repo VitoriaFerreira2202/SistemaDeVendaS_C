@@ -23,7 +23,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             this.conexao = new ConnectionFactory().getconnection();
         }
 
-        #region CadastroDeFurnecedor
+        #region CadastroDeFornecedor
 
         public void CadastrarFornecedor(Fornecedor obj)
         {
@@ -31,7 +31,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             {
                 using (MySqlConnection conexao = new ConnectionFactory().getconnection())
                 {
-                    string sql = @"insert into tb_funcionarios (nome,cnpj,email,telefone,celular,cep
+                    string sql = @"insert into tb_fornecedores (nome,cnpj,email,telefone,celular,cep
                                                     ,endereco,numero,complemento,bairro,cidade,estado)
                                 values(@nome,@cnpj,@email,@telefone,@celular,@cep,@endereco,@numero,
                                                                    @complemento,@bairro,@cidade,@estado)";
@@ -55,7 +55,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
                         conexao.Open();
                         executacmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Funcionario cadastrado com sucesso");
+                        MessageBox.Show("Fornecedor cadastrado com sucesso");
                     }
                 }
             }
@@ -65,7 +65,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             }
         }
 
-        #endregion CadastroDeFurnecedor
+        #endregion CadastroDeFornecedor
 
         #region ListarFornecedor
 
@@ -105,7 +105,8 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             {
                 using (MySqlConnection conexao = new ConnectionFactory().getconnection())
                 {
-                    string sql = @"update tb_fornecedores set nome=@nome,rg=@rg,cnpj=@cnpj,email=@email,telefone=@telefone,celular=@celular,
+                    string sql = @"update tb_fornecedores set nome=@nome,
+                                    cnpj=@cnpj,email=@email,telefone=@telefone,celular=@celular,
                                                         cep=@cep,endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
                                                         cidade=@cidade,estado=@estado
                                                         where id=@id";
@@ -141,7 +142,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
 
         #endregion AlteraFornecedor
 
-        #region ExcluirFuncionario
+        #region Excluirfornecedor
 
         public void ExcluirFornecedor(Fornecedor obj)
         {
@@ -170,7 +171,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             }
         }
 
-        #endregion ExcluirFuncionario
+        #endregion Excluirfornecedor
 
         #region PesquisaNomeFornecedor
 

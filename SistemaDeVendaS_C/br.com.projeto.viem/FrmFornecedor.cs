@@ -95,6 +95,8 @@ namespace SistemaDeVendaS_C.br.com.projeto.viem
         private void btnEditar_Click(object sender, EventArgs e)
         {
             Fornecedor obj = new Fornecedor();
+
+            obj.codigo = int.Parse(txtCodigo.Text);
             obj.nome = txtNome.Text;
             obj.cnpj = txtCnpj.Text;
             obj.email = txtEmail.Text;
