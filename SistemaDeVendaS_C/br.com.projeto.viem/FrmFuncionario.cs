@@ -32,6 +32,9 @@ namespace SistemaDeVendaS_C.br.com.projeto.viem
             obj.rg = txtRg.Text;
             obj.cpf = txtCpf.Text;
             obj.email = txtEmail.Text;
+            obj.senha = txtSenha.Text;
+            obj.cargo = txtCargo.Text;
+            obj.nivel_acesso = txtNivelAcesso.Text;
             obj.telefone = txtTelefone.Text;
             obj.celular = txtCelular.Text;
             obj.cep = txtCep.Text;

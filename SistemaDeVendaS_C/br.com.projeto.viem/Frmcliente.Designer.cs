@@ -101,9 +101,9 @@
             // 
             this.btnEditar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnEditar.Location = new System.Drawing.Point(407, 410);
+            this.btnEditar.Location = new System.Drawing.Point(423, 393);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(80, 30);
             this.btnEditar.TabIndex = 38;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
@@ -113,9 +113,9 @@
             // 
             this.btnExcluir.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnExcluir.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnExcluir.Location = new System.Drawing.Point(319, 410);
+            this.btnExcluir.Location = new System.Drawing.Point(335, 393);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.Size = new System.Drawing.Size(80, 30);
             this.btnExcluir.TabIndex = 37;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -125,9 +125,9 @@
             // 
             this.btnNovo.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnNovo.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnNovo.Location = new System.Drawing.Point(127, 410);
+            this.btnNovo.Location = new System.Drawing.Point(143, 393);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(75, 23);
+            this.btnNovo.Size = new System.Drawing.Size(80, 30);
             this.btnNovo.TabIndex = 35;
             this.btnNovo.Text = "NOVO";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -136,9 +136,9 @@
             // 
             this.btnSalvar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.btnSalvar.Location = new System.Drawing.Point(226, 410);
+            this.btnSalvar.Location = new System.Drawing.Point(242, 393);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(75, 23);
+            this.btnSalvar.Size = new System.Drawing.Size(80, 30);
             this.btnSalvar.TabIndex = 36;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;

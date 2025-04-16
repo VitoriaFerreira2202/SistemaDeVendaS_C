@@ -8,6 +8,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.model
 {
     public class Funcionario : Pessoa
     {
+        public string rg { get; set; }
         public string cargo { get; set; }
         public string senha { get; set; }
         public string nivel_acesso { get; set; }
