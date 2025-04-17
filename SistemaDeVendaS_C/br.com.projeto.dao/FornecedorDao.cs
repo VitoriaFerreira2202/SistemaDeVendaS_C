@@ -181,16 +181,17 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             {//passo 1 - Definir o comando sql para o insert
                 conexao = new ConnectionFactory().getconnection();
 
-                DataTable tabelaFucionario = new DataTable();
-                string sql = "select * from tb_fornecedores where nome=@nome";
+                DataTable tabelaFornecedor = new DataTable();
+                string sql = $"select * from tb_fornecedores where nome=@nome";
                 // 2 passo - organizar o comando sql
                 using (MySqlCommand cmdExecSql = new MySqlCommand(sql, conexao))
                 {
                     {
+                        cmdExecSql.Parameters.AddWithValue("@nome", nome);
                         MySqlDataAdapter da = new MySqlDataAdapter(cmdExecSql);
-                        da.Fill(tabelaFucionario);
+                        da.Fill(tabelaFornecedor);
 
-                        return tabelaFucionario;
+                        return tabelaFornecedor;
                     }
                 }
             }

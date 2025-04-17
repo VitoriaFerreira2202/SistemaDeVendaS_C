@@ -203,6 +203,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
                 using (MySqlCommand cmdExecSql = new MySqlCommand(sql, conexao))
                 {
                     {
+                        cmdExecSql.Parameters.AddWithValue("@nome", nome);
                         MySqlDataAdapter da = new MySqlDataAdapter(cmdExecSql);
                         da.Fill(tabelaFucionario);
 
