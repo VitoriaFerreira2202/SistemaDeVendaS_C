@@ -30,7 +30,6 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtCodFor = new System.Windows.Forms.TextBox();
             this.txtQntEstoque = new System.Windows.Forms.TextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -41,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabelaFornecedor = new System.Windows.Forms.DataGridView();
+            this.tabelaProduto = new System.Windows.Forms.DataGridView();
             this.btnpesquisar = new System.Windows.Forms.Button();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -51,10 +50,11 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.cbFornecedor = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaProduto)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.txtCodFor);
+            this.tabPage1.Controls.Add(this.cbFornecedor);
             this.tabPage1.Controls.Add(this.txtQntEstoque);
             this.tabPage1.Controls.Add(this.txtPreco);
             this.tabPage1.Controls.Add(this.txtDescricao);
@@ -85,15 +85,8 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(532, 204);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "DADOS PESSOAS";
+            this.tabPage1.Text = "DADOS DO PRODUTO";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // txtCodFor
-            // 
-            this.txtCodFor.Location = new System.Drawing.Point(262, 140);
-            this.txtCodFor.Name = "txtCodFor";
-            this.txtCodFor.Size = new System.Drawing.Size(150, 20);
-            this.txtCodFor.TabIndex = 65;
             // 
             // txtQntEstoque
             // 
@@ -180,25 +173,25 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.tabelaFornecedor);
+            this.tabPage2.Controls.Add(this.tabelaProduto);
             this.tabPage2.Controls.Add(this.btnpesquisar);
             this.tabPage2.Controls.Add(this.txtPesquisa);
             this.tabPage2.Controls.Add(this.label16);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(532, 255);
+            this.tabPage2.Size = new System.Drawing.Size(532, 204);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CONSULTA";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabelaFornecedor
+            // tabelaProduto
             // 
-            this.tabelaFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabelaFornecedor.Location = new System.Drawing.Point(28, 63);
-            this.tabelaFornecedor.Name = "tabelaFornecedor";
-            this.tabelaFornecedor.Size = new System.Drawing.Size(467, 150);
-            this.tabelaFornecedor.TabIndex = 37;
+            this.tabelaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tabelaProduto.Location = new System.Drawing.Point(28, 63);
+            this.tabelaProduto.Name = "tabelaProduto";
+            this.tabelaProduto.Size = new System.Drawing.Size(467, 120);
+            this.tabelaProduto.TabIndex = 37;
             // 
             // btnpesquisar
             // 
@@ -293,6 +286,14 @@
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             // 
+            // cbFornecedor
+            // 
+            this.cbFornecedor.FormattingEnabled = true;
+            this.cbFornecedor.Location = new System.Drawing.Point(262, 140);
+            this.cbFornecedor.Name = "cbFornecedor";
+            this.cbFornecedor.Size = new System.Drawing.Size(150, 21);
+            this.cbFornecedor.TabIndex = 66;
+            // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,12 +307,13 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmProduto";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FrmProduto_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabelaFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tabelaProduto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -322,14 +324,13 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView tabelaFornecedor;
+        private System.Windows.Forms.DataGridView tabelaProduto;
         private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox txtCodFor;
         private System.Windows.Forms.TextBox txtQntEstoque;
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.TextBox txtDescricao;
@@ -343,5 +344,6 @@
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.ComboBox cbFornecedor;
     }
 }
