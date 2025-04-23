@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbFornecedor = new System.Windows.Forms.ComboBox();
             this.txtQntEstoque = new System.Windows.Forms.TextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.cbFornecedor = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -87,6 +87,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "DADOS DO PRODUTO";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cbFornecedor
+            // 
+            this.cbFornecedor.FormattingEnabled = true;
+            this.cbFornecedor.Location = new System.Drawing.Point(262, 140);
+            this.cbFornecedor.Name = "cbFornecedor";
+            this.cbFornecedor.Size = new System.Drawing.Size(150, 21);
+            this.cbFornecedor.TabIndex = 66;
             // 
             // txtQntEstoque
             // 
@@ -192,6 +200,8 @@
             this.tabelaProduto.Name = "tabelaProduto";
             this.tabelaProduto.Size = new System.Drawing.Size(467, 120);
             this.tabelaProduto.TabIndex = 37;
+            this.tabelaProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaProduto_CellClick);
+            this.tabelaProduto.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabelaProduto_CellDoubleClick);
             // 
             // btnpesquisar
             // 
@@ -204,6 +214,7 @@
             this.btnpesquisar.TabIndex = 36;
             this.btnpesquisar.Text = "Pesquisar";
             this.btnpesquisar.UseVisualStyleBackColor = false;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtPesquisa
             // 
@@ -252,6 +263,7 @@
             this.btnEditar.TabIndex = 53;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -263,6 +275,7 @@
             this.btnExcluir.TabIndex = 52;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnNovo
             // 
@@ -285,14 +298,7 @@
             this.btnSalvar.TabIndex = 51;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
-            // 
-            // cbFornecedor
-            // 
-            this.cbFornecedor.FormattingEnabled = true;
-            this.cbFornecedor.Location = new System.Drawing.Point(262, 140);
-            this.cbFornecedor.Name = "cbFornecedor";
-            this.cbFornecedor.Size = new System.Drawing.Size(150, 21);
-            this.cbFornecedor.TabIndex = 66;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // FrmProduto
             // 

@@ -105,8 +105,7 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
             {
                 using (MySqlConnection conexao = new ConnectionFactory().getconnection())
                 {
-                    string sql = @"update tb_fornecedores set nome=@nome,
-                                    cnpj=@cnpj,email=@email,telefone=@telefone,celular=@celular,
+                    string sql = @"update tb_fornecedores set nome=@nome,cnpj=@cnpj,email=@email,telefone=@telefone,celular=@celular,
                                                         cep=@cep,endereco=@endereco,numero=@numero,complemento=@complemento,bairro=@bairro,
                                                         cidade=@cidade,estado=@estado
                                                         where id=@id";

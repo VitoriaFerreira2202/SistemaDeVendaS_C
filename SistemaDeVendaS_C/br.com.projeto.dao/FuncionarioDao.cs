@@ -144,7 +144,6 @@ namespace SistemaDeVendaS_C.br.com.projeto.dao
 
                         conexao.Open();
                         executacmd.ExecuteNonQuery();
-
                         MessageBox.Show("Funcionario alterado com sucesso");
                     }
                 }

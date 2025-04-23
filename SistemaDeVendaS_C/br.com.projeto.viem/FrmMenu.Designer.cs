@@ -44,6 +44,7 @@
             this.btnCadastrarCliente.TabIndex = 0;
             this.btnCadastrarCliente.Text = "CADASTRAR CLIENTE";
             this.btnCadastrarCliente.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // panel1
             // 
@@ -62,6 +63,7 @@
             this.btnCadastrarFuncionario.TabIndex = 2;
             this.btnCadastrarFuncionario.Text = "CADASTRAR FUNCIONARIO";
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
             // 
             // btnCadastrarFornecedor
             // 
@@ -72,6 +74,7 @@
             this.btnCadastrarFornecedor.TabIndex = 3;
             this.btnCadastrarFornecedor.Text = "CADASTRAR FORNECEDOR";
             this.btnCadastrarFornecedor.UseVisualStyleBackColor = true;
+            this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click);
             // 
             // btnCadastrarProduto
             // 
@@ -82,6 +85,7 @@
             this.btnCadastrarProduto.TabIndex = 4;
             this.btnCadastrarProduto.Text = "CADASTRAR PRODUTO\r\n";
             this.btnCadastrarProduto.UseVisualStyleBackColor = true;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
             // FrmMenu
             // 
